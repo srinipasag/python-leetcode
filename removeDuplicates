@@ -1,0 +1,24 @@
+class Solution:
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        if not nums:
+            return 0
+        
+        my_len = 0
+        
+        for i in range(1, len(nums)):
+            if (nums[i]) != (nums[my_len]):
+                my_len += 1
+                nums[my_len] = nums[i]
+                print ("mylenn" , my_len, nums[my_len])
+                
+        return my_len + 1
+    
+    
+Your input:[-1,-1,2]
+stdout:mylenn 1 2
+Output:[-1,2]
+Expected:[-1,2]
