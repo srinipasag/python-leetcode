@@ -1,0 +1,28 @@
+class Solution:
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+        remainder = 0
+        sign = 0
+        
+        if x < 0:
+            sign = -1
+        local = x
+        x = abs(x)
+        while x > 0:
+            remainder += x % 10
+            x = x // 10
+            if x > 0:
+                remainder *= 10
+            #print (remainder)
+        return remainder == local
+        
+Your input
+121
+Output
+true
+Diff
+Expected
+true
