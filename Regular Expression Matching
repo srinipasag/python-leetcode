@@ -1,0 +1,64 @@
+
+""""
+
+:THIS IS WRONG SOLUTION
+
+"""
+
+class Solution:
+    def isMatch(self, s, p):
+        """
+        :type s: str
+        :type p: str
+        :rtype: bool
+        """
+        
+        # S is empty or P is empty
+        # Upper case
+        
+        # . matches any single character
+        index= -1
+        if len(s) < len(p):
+            return False
+        
+        if len(s) == 0 or len(p) == 0:
+            return False
+        
+        my_list = str.split(s)
+        my_pat = str.split(p)
+        count = 0
+        for i in my_list:
+            if len(i) == len(p):
+                for index in range(len(i)):
+                    if i[index] == p[index] or p[index] == '.':
+                        count += 1
+                        print (i, count)
+                        continue
+                    elif p[index] == '*':
+                        if p[index -1] == '.':
+                            count += 1
+                            continue
+                        
+                        elif i[index] == p[index -1]:
+                            count += 1
+                            continue
+                            
+                        elif i[index] == p[index -1]:
+                            count += 1
+                            print ("this is second", i, count)
+                            continue
+                    else:
+                        break
+            if count == len(i):
+                return True
+        return False           
+                                   
+        
+        if p in my_list:
+            return true
+        else:
+            return False
+    
+            
+        # * matches zero or more
+        
