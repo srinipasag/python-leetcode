@@ -1,0 +1,41 @@
+class Solution:
+    def intersection(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: List[int]
+        """
+        my_dict = {}
+        my_set = set()
+        if not nums1 or not nums2:
+            return list(my_set)
+        
+        for num in nums1:
+            my_dict[num] = num
+            
+        #print (my_dict)
+        
+        for num2 in nums2:
+            print (num2)
+            #if my_dict.keys(nums2)
+            if num2 in my_dict:
+                my_set.add(num2)
+        #print (my_set)
+
+
+        return list(my_set)
+       
+       Your input
+[4,9,5]
+[9,4,9,8,4]
+stdout
+9
+4
+9
+8
+4
+Output
+[9,4]
+Diff
+Expected
+[9,4]
