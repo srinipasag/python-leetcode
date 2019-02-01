@@ -1,0 +1,42 @@
+class Solution:
+    def isAnagram(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        #my_set1 = set(s)
+        #my_set2 = set(t)
+        
+        #return bool(my_set1 & my_set2 )
+        my_dict = {}
+        if not s and t:
+            return False
+        
+        for letter in s:
+            if not letter in my_dict:
+                my_dict[letter] = 1
+            else:
+                my_dict[letter] += 1
+                #print(my_dict)
+
+        #print(my_dict)
+
+        for letter in t:
+            if letter in my_dict:
+                my_dict[letter] -= 1
+                if my_dict[letter] == 0:
+                    del my_dict[letter]
+            else:
+                return False
+        #print(my_dict)
+        return len(my_dict) == 0
+        
+        Your input
+"a"
+"ab"
+Output
+false
+Diff
+Expected
+false
