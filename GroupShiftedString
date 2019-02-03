@@ -1,0 +1,19 @@
+#code
+my_list = ["abc", "bcd", "acef", "xyz", "az", "ba", "a", "z"]
+print(my_list)
+word_count = []
+my_dict = {}
+temp = {}
+for word in my_list:
+    word_count = []
+    for i in range(0, len(word)-1):
+        word_count.append((ord (word[i+1]) - ord(word[i]) + 26) % 26)
+    my_dict[word] = word_count
+
+for k,value in sorted(my_dict.items()):
+    print(k, value)
+    #if len(value) > 0: 
+    print("Value:" , k, value)
+    temp.setdefault(tuple(value), []).append(k)
+        
+print (temp.items())
