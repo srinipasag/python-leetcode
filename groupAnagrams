@@ -1,0 +1,20 @@
+class Solution:
+    def groupAnagrams(self, strs: 'List[str]') -> 'List[List[str]]':
+        dic = {}
+        for str1 in strs:
+            item = ",".join(sorted(str1))
+            if item in dic:
+                dic[item].append(str1)
+            else:
+                dic[item] = [str1]
+        #print (dic.items())
+        my_list = list(dic.values())
+        return (my_list)
+        
+Your input
+["eat","tea","tan","ate","nat","bat"]
+Output
+[["eat","tea","ate"],["tan","nat"],["bat"]]
+Diff
+Expected
+[["nat","tan"],["bat"],["ate","eat","tea"]]
