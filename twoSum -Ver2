@@ -1,0 +1,9 @@
+Two Sum II - Input array is sorted  
+class Solution:
+    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+        result = dict()
+        for index, item in enumerate(numbers):
+            if target-item in result:
+                return [result[target-item]+1, index+1]
+            else:
+                result[item] = index
