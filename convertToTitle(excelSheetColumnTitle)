@@ -1,0 +1,16 @@
+class Solution:
+    def convertToTitle(self, n: int) -> str:
+        div = n//26
+        divisor = n%26
+        my_str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        res = ''
+        q = n
+        while True:
+            r = (q-1)%26
+            q = (q-1)//26
+            print ("r is-", r , "q is-", q)
+            if q == 0:
+                return my_str[r]+res
+            else:
+                res = my_str[r]+res
+            return res
