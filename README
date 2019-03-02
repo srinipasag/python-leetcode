@@ -1,1 +1,87 @@
 PRACTICE PALINDROME PAIRS
+
+==================================================
+Here are the topics that needed to pe prepared:
+==================================================
+https://medium.com/@rachit138/how-i-cleared-the-amazon-sde-2-interview-f82a33706ff4 
+Arrays
+Remove, Search, Range Search, insert position, Rotate, Search in rotated, Max subarray, Set Matrix, Pascal’s Triangle, 2 Sum, 3 Sum, Single number, Intersection, Majority, Duplicates, Missing, Consecutive sequence, valid sudoku, plus one
+
+Sorting
+Bubble, Insertion, Counting, Quick, Merge
+
+Heap
+Kth largest in array, Kth smallest in matrix, Median, Ugly Number, Super Ugly Number
+
+Strings
+Reverse, First unique char, anagram, pallindrome, last word, common prefix, substring without repeating chars,
+
+Numbers
+Pallindrome, Power, Sqrt, Reverse, Happy number, Guess number, Next permutation, single
+
+Linked Lists
+Delete, Reverse, Remove, Cycle, Reverse range, Rotate, Partition, Merge, Swap Node, Add, Add one, Remove duplicates, Pallindrome, Odd-even
+
+Binary Trees
+Max depth, Min depth, Invert, Same, LCA, Level order, Inorder, Preorder, Postorder, Balanced, Symmetric, Validate, Paths, Path sum, Max path sum, Right side view, Flatten to linked list, Kth smallest, Next Right
+
+Graphs
+Islands
+
+Dynamic Programming
+Climb Stairs, House Robber, Combination Sum, Palindromic Substring, Max product subarray, Frog Jump, Coin Change, Unique Paths, LIS, minimum path sum
+
+Design
+Chess, Twitter, LRU cache, Swimming Pool, Payment Gateway, ATM
+
+====================================
+AMAZON Common interview questions:
+====================================
+Use the time to prepare well for Tree and Graph Algorithms, Dynamic Programming, Backtracking, Greedy Algorithms etc. These are always the hot topics for interviews at these companies.
+
+Some common problems asked in Amazon Interviews(both online and F2F) :
+
+Save all leaf nodes of a Binary tree in a Doubly Linked List by using Right node as Next node and Left Node as Previous Node.
+Given an array,find the maximum j – i such that arr[j] > arr[i]
+Remove Alternate Duplicate characters from a char array you have to do it in Place.Like keeping only the odd occurences of each character.
+Example: Input: “you got beautiful eyes”
+Output: ”you gtbeaiful es”
+Allowed Time Complexity was O(n) 
+and Space Complexity was O(1)
+In a file there are 1 million words . Find 10 most frequent words in that file.
+Find all nodes at k-distance from a given node in a binary tree
+Clone a linked list with next and random pointer
+Serialise and Deserialise a linked list with next and random pointer.
+Construct a binary tree from given inorder and preorder traversals.
+Return a tree such that each internal node stores sum of all its child nodes. Each leaf node stores zero.
+How will you implement linked list with 1 million nodes? How will you access 999999 th node? Give some optimal design strategy and implementation.
+Reversal of Linked List in groups of K.
+Given a positive integer N, count all possible distinct binary strings of length N such that there are no consecutive 1’s.
+Check whether given binary tree is balanced or not. Definition was no two leaves should have height difference of greater than one.
+Remove duplicates from string in place in O(n).
+Connect nodes on same level in a binary tree.
+Find sum of data of all leaves of a binary tree on same level and then multiply sums obtained of all levels.
+Given a matrix of characters and a word.
+you have to count the number of occurrences of that word in that matrix. you can move to any of the eight valid directions from current position.
+You are given an string as input which represents a path. You have to normalize that path inplace(NO EXTRA SPACE).
+e.g. input : "\a\b\c\..\..\file.txt"
+output: "\a\file.txt"
+Least common ancestor of two nodes in a binary tree
+Given two sorted arrays (with repetitive elements) find the kth minimum number from both arrays.
+Given the root to a binary tree, a value n and k.Find the sum of nodes at distance k from node with value n
+Find an element in a rotated array
+Given two linked lists both represent a number. Create a linked list that contains its sum.
+Given a binary search tree , print the path which has the sum equal to k and has minimum hops. i.e if there are multiple paths with the sum equal to k then print the path with minimum number of nodes.
+A MxN matrix containing integers (positive, negative and zero’s). For every position containing 0, mark the corresponding row and column as 0.
+Rotate MxN matrix by 90 degress.
+Find the nth number that contains the digit k or is divisible by k. (2 <= k <= 9)
+Write a program to connect next left node in a binary tree. Also first node of each level should be pointing to last node of next level? (Without using Queue)
+Convert a binary tree to its sum tree(each node is the sum of its children)
+Given a directed graph. Construct another graph from given graph such that if path exists from vertices A to vertices B and from B to C, then path from A to C and from C to A also should exists.
+Implement hashmap on your own. Write good hashing function for string.
+Given an array, arrange the elements such that the number formed by concatenating the elements is highest. 
+E.g.: input = [9, 93, 24, 6], the output should be: [9,93,6,24]. This is because if you concatenate all the numbers, 993624 is the highest number that can be formed.
+Given a string, find the longest substring which is palindrome.
+Given that integers are read from a data stream. Find median of elements read so for in efficient way. For simplicity assume there are no duplicates.
+
+
