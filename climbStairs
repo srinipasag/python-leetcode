@@ -1,0 +1,17 @@
+class Solution(object):
+    def climbStairs(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        d = {}
+        def my_helper(n):
+            print ("n is", n)
+            if n == 1 or n == 2:
+                return n
+            elif n in d:
+                return d[n]
+            else:
+                d[n] = my_helper(n-1) + my_helper(n-2)
+                return d[n]
+        return my_helper(n)
