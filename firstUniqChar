@@ -20,3 +20,13 @@ class Solution(object):
                 return d[key]
         return -1
             
+#dolution 2
+
+from collections import Counter
+
+def firstUniqChar(s):
+    c = Counter(s)
+    for i in range(len(s)):
+        if c[s[i]] == 1:
+            return i
+    return -1
