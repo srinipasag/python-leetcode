@@ -1,0 +1,26 @@
+class Solution(object):
+    def intersect(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: List[int]
+        """
+        my_dic = {}
+        res = []
+        my_set = set()
+        for i in nums1:
+            if i in my_dic:
+                my_dic[i] += 1
+            else:
+                my_dic[i] = 1
+          
+        #print (my_dic)
+        
+        for i in nums2:
+            if i in my_dic and my_dic[i] > 0:
+                print (i)
+                res.append(i)
+                my_dic[i] -= 1
+        #print (res)
+        return res
+        
