@@ -1,0 +1,35 @@
+class Solution:
+    def decodeString(self, s: str) -> str:
+        stack = []
+        times_stack = []
+        res = ""
+        idx = 0
+        while idx <len(s):
+            #print ("index is:", idx)
+          
+            if s[idx].isdigit():
+                tmp = s[idx]
+                idx += 1
+                print (tmp)
+                while (idx < len(s)) and s[idx].isdigit():
+                    tmp += s[idx]
+                    idx += 1
+                    #print (tmp)
+                    
+                times_stack.append(int(tmp))
+                continue
+                
+            elif s[idx] == '[':
+                #print ("the res is:", res)
+                stack.append(res)
+                res = ''
+            elif s[idx] == ']':
+                temp, times = stack.pop(), times_stack.pop()
+                #print("TEMP:", temp,times)
+                res = temp +times*res
+            else:
+                res += s[idx]
+            idx+=1 
+                
+        #print("result is", res)
+        return res
