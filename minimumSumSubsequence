@@ -1,0 +1,48 @@
+def minWindow(tgtList, aTagList):
+    print ("tgtList is:",tgtList)
+    print("aTagList is:", aTagList)
+    counter = len(tgtList)
+    res = []
+
+    table = dict()
+    for word in tgtList:
+        if word in table:
+            print (word, table[word])
+            table[word] += 1
+        else:
+            table[word] = 1
+
+    begin,end = 0,0
+    print("The Dic table is: and counter is-", table, counter)
+    
+    # start the sliding window
+    while(end < len(aTagList)):
+        endStr = aTagList[end]
+        print("end is:", endStr)
+        if endStr in table:
+            print("found one match decrement the counter", endStr, counter)
+            table[endStr] -= 1
+            if table[endStr] == 0:
+                counter -= 1
+        
+        print("the Table is:", table, counter)
+        
+        while(counter == 0):
+            # this is the first window of pattern
+            res = [begin,end]
+            print("the result is:", res)
+            
+            startChar = aTagList[begin]
+            if startChar in table:
+                print("startChar is the result is:", table[startChar])
+                table[startChar] += 1
+                if(table[startChar] > 0):
+                    counter+= 1
+            
+            begin+= 1
+            
+        end += 1
+        print("the result is 2:", res)
+
+
+                
