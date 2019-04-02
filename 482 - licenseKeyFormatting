@@ -1,0 +1,32 @@
+class Solution:
+    def licenseKeyFormatting(self, S: str, K: int) -> str:
+        #print (S, K)
+        length = len(S)-1
+        cnt = 0
+        res =""
+        for c in S[::-1]:
+            if c != '-':
+                res += c.upper()
+                cnt += 1
+                if cnt % K == 0:
+                    res+='-'
+        #print(res[::-1][1:])
+        if not res:
+            return ""
+        elif res[-1] != '-':
+            return res[::-1]
+        else:
+            print("im here")
+            return res[::-1][1:]
+           
+           
+  Your input
+"5F3Z-2e-9-w"
+4
+stdout
+im here
+Output
+"5F3Z-2E9W"
+Diff
+Expected
+"5F3Z-2E9W"
